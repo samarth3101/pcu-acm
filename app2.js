@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 window.onload = function () {
     setTimeout(function () {
         document.getElementById("pcu-acm").classList.add("visible");
-    }, 3600);
+    }, 3400);
 
     setTimeout(function () {
         const mainPage = document.getElementById("main-page");
