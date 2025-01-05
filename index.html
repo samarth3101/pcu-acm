@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inauguration Invitation</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jsbarcode"></script> -->
+</head>
+
+<body>
+    <!-- Popup Invitation -->
+    <div id="popup" class="popup">
+        <h1>You're Invited!</h1>
+        <p>Join us for the inauguration of our new venture!</p>
+        <p><strong>Date:</strong> 8<sup>th</sup> January 2025</p>
+        <p><strong>Time:</strong> 11:00-01:00</p>
+        <p><strong>Venue:</strong> Audit Hall, PCU Campus, Pune</p>
+        <button class="close-btn" onclick="closePopup()">Enter</button>
+        <button class="ticket-btn" onclick="showTicketForm()">Grab Tickets..!</button>
+    </div>
+
+    <!-- Ticket Form -->
+    <div id="ticket-form" class="hidden">
+        <h2>Get Your Ticket</h2>
+        <form id="form" onsubmit="generateTicket(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Generate Ticket</button>
+        </form>
+    </div>
+
+    <!-- Ticket -->
+    <div id="ticket" class="hidden">
+        <h2>Your Ticket</h2>
+        <p><strong>Name:</strong> <span id="ticket-name"></span></p>
+        <p><strong>Email:</strong> <span id="ticket-email"></span></p>
+        <p><strong>Ticket ID:</strong> <span id="ticket-id"></span></p>
+        <svg id="barcode"></svg>
+        <p>Save this ticket for entry!</p>
+        <button class="close-ticket-btn" onclick="closeTicket()">Close Ticket</button>
+        <button class="save-pdf-btn" onclick="saveTicketAsPDF()">Save as PDF</button>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATHERTECH Animation</title>
+  <link rel="stylesheet" href="main.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Doto:wght@100..900&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Lato&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik+Vinyl&family=Ubuntu:wght@500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="logo-container">
+      <img src="/assets/acm.png" alt="ACM Logo" class="acm-logo">
+      <div class="navbar-logo" id="navbar-logo"></div>
+      <div class="pcu-acm" id="pcu-acm">PCU ACM <sup>&reg;</sup></div>
+    </div>
+    <ul class="nav-links">
+      <!-- <li><a href="home.html">Home</a></li> -->
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Our Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Animated Box -->
+  <div class="box" id="box">
+    <div class="letters">
+      <span class="letter" style="animation-delay: 0s;">A</span>
+      <span class="letter" style="animation-delay: 0.1s;">T</span>
+      <span class="letter" style="animation-delay: 0.2s;">H</span>
+      <span class="letter" style="animation-delay: 0.3s;">E</span>
+      <span class="letter" style="animation-delay: 0.4s;">R</span>
+      <span class="letter" style="animation-delay: 0.5s;">T</span>
+      <span class="letter" style="animation-delay: 0.6s;">E</span>
+      <span class="letter" style="animation-delay: 0.7s;">C</span>
+      <span class="letter" style="animation-delay: 0.8s;">H</span>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-page" id="main-page">
+    <h1 id="main-textt" >Welcome to ATHERTECH</h1>
+    <p  id="main-textt">Discover the future of technology with us.</p>
+  </div>
+
+  <!-- Video Box -->
+  <div class="video-box" id="video-box">
+    <div class="video-background">
+      <video autoplay muted loop id="background-video">
+        <source src="/assets/acmvid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <script src="app2.js"></script>
+</body>
+
+</html>

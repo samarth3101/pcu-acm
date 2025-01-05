@@ -1,0 +1,307 @@
+
+body {
+    /* background-color: black; */
+    background-image: url('assets/pcu.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/* Popup Styles */
+.popup {
+    display: none; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0) rotate(-90deg); 
+    width: 90%;
+    max-width: 500px;
+    background: linear-gradient(145deg, #013f66, #011f33); 
+    border: 2px solid #9b823c; 
+    border-radius: 15px;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+    animation: popupAnimation 0.8s ease-in-out forwards;
+}
+
+.popup h1 {
+    font-size: 2em;
+    color: #1895d0; 
+    margin-bottom: 20px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.popup p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #ffffff;
+}
+
+.popup p strong {
+    color: #9b823c; 
+}
+
+.popup button {
+    padding: 10px 20px;
+    background-color: #013f66;
+    color: white;
+    border: 1px solid #9b823c;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: 0.2s all ease-in;
+}
+
+.popup button:hover {
+    background-color: #9b823c;
+}
+
+
+
+/* tkt sec */
+#ticket-form {
+    display: none;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #013f66;
+    color: #9b823c;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;  /* Ensures padding and border are included in the total width */
+}
+
+#ticket-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#ticket-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+#ticket-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;  /* Ensures padding and border are included in the total width */
+}
+
+#ticket-form button {
+    padding: 10px 20px;
+    background-color: #013f66;
+    color: white;
+    border: 1px solid #9b823c;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: 0.2s all ease-in;
+}
+
+#ticket-form button:hover {
+    background-color: #9b823c;
+}
+
+/* Ticket */
+#ticket {
+    text-align: center;
+    display: none;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    color: #011f33;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+#ticket h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#ticket p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+#ticket svg {
+    margin: 20px 0;
+    width: 100%;
+    height: auto;
+}
+
+#ticket button {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#ticket button:hover {
+    background-color: #c82333;
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}
+
+/* Success Modal */
+#success-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+#success-modal p {
+    font-size: 24px;
+    margin-top: 100px;
+}
+
+
+@media (max-width: 320px) {
+    #ticket-form, #ticket {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #ticket-form h2, #ticket h2 {
+        font-size: 20px;
+    }
+
+    #ticket-form input, #ticket-form button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    #ticket p {
+        font-size: 14px;
+    }
+
+    #ticket svg {
+        width: 80%;
+    }
+
+    #ticket-form button {
+        padding: 8px 16px;
+    }
+
+    #ticket button {
+        padding: 8px 16px;
+    }
+
+    #success-modal p {
+        font-size: 18px;
+        margin-top: 50px;
+    }
+}
+
+
+
+
+/* pop animate */
+@keyframes popupAnimation {
+    0% {
+        transform: translate(-50%, -50%) scale(0) rotate(-90deg); 
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1) rotate(10deg); 
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1) rotate(0); 
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1200px) {
+    .popup {
+        width: 80%;
+        padding: 25px;
+    }
+
+    .popup h1 {
+        font-size: 1.8em;
+    }
+
+    .popup p {
+        font-size: 1em;
+    }
+
+    .close-btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    .popup {
+        width: 75%;
+        padding: 20px;
+    }
+
+    .popup h1 {
+        font-size: 1.5em;
+    }
+
+    .popup p {
+        font-size: 0.9em;
+    }
+
+    .close-btn {
+        padding: 8px 18px;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup {
+        width: 70%;
+        padding: 15px;
+    }
+
+    .popup h1 {
+        font-size: 1.3em;
+    }
+
+    .popup p {
+        font-size: 0.8em;
+    }
+
+    .close-btn {
+        padding: 8px 16px;
+        font-size: 0.8em;
+    }
+}
