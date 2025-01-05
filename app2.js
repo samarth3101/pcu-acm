@@ -32,5 +32,5 @@ window.onload = function () {
 
         const video = document.getElementById("background-video");
         video.play(); 
-    }, 4600); 
+    }, 4100); 
 };
