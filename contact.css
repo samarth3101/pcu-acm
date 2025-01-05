@@ -82,14 +82,13 @@ h2 {
 
 .nav-links a.active {
     color: #fff;
-    border-bottom: 2px solid #00A9E0; /* ACM blue u */
+    border-bottom: 2px solid #00A9E0;
 }
 
 /* Contact Page Content */
 .main-page {
     text-align: center;
     padding: 100px 20px 50px;
-    /* Padding adjusted to account for fixed navbar */
 }
 
 .main-page h1 {
@@ -196,6 +195,23 @@ h2 {
     cursor: pointer;
 }
 
+/* Contact Container - Flexbox */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#contact-info,
+#contact-form {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -214,10 +230,13 @@ h2 {
         font-size: 2rem;
     }
 
+    .contact-container {
+        flex-direction: column;
+    }
+
     #contact-info,
     #contact-form {
-        padding: 20px;
+        max-width: 100%;
+        margin-right: 0;
     }
 }
-
-
