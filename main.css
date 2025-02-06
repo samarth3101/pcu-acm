@@ -8,6 +8,12 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
+#my_tag{
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #001f3f;
+}
+/* css only for desktops */
 
 
 /* Hamburger Menu */
